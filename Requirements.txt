@@ -1,0 +1,5 @@
+Juypterlab
+sklearn
+pandas
+flask
+Gunicorn
