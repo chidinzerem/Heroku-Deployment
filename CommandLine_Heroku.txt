@@ -1,0 +1,389 @@
+Last login: Wed Apr 28 20:53:38 on ttys000
+(base) cu-tcomgw-4-10:~ chidinzerem$ conda activate labenv
+(labenv) cu-tcomgw-4-10:~ chidinzerem$ python testdav_flask.py
+python: can't open file '/Users/chidinzerem/testdav_flask.py': [Errno 2] No such file or directory
+(labenv) cu-tcomgw-4-10:~ chidinzerem$ ls
+Advanced Data Notes.R	Movies			github
+Agent			Music			hello.py
+Applications		Pictures		jupyter-scala
+DavesClass		Public			labstuff
+Desktop			PycharmProjects		myproject
+Documents		SherLock-ML		scikit_learn_data
+Downloads		VirtualBox VMs		stockdynamic.R
+Dropbox			chidinzerem		unstructed
+FlinkExamples		deploy			your_files
+Library			getting-started
+(labenv) cu-tcomgw-4-10:~ chidinzerem$ cd DavesClass/
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ ls
+README.md			newdata.py
+Requirements.txt		pipe.pickle
+Untitled.ipynb			procfile
+__pycache__			python-getting-started
+app.py				test_pickle.py
+deployment			test_pickled_model.ipynb
+fit-model.ipynb			testdata.json
+hello.py			testdav_flask.py
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Hello, World
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Hello, World
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+<bound method Response.json of <Response [404]>>
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ r.json
+-bash: r.json: command not found
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+<bound method Response.json of <Response [200]>>
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ print(r.json)
+-bash: syntax error near unexpected token `r.json'
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py print(r.json)
+-bash: syntax error near unexpected token `('
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 26, in <module>
+    data = r.json()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 26, in <module>
+    data = r.json()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 25, in <module>
+    r = requests.post('http://127.0.0.1:5000/predict', json ={'newdata': testdata})
+NameError: name 'testdata' is not defined
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/http/client.py", line 1253, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/http/client.py", line 1299, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/http/client.py", line 1248, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/http/client.py", line 1008, in _send_output
+    self.send(msg)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/http/client.py", line 948, in send
+    self.connect()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x103db70a0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /Json_test (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103db70a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 26, in <module>
+    r = requests.get('http://127.0.0.1:5000/Json_test')
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /Json_test (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103db70a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+probability is 0.05
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+probability is ['c-CS-m']
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ heroku login
+heroku: Press any key to open up the browser to login or q to exit: 
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/f0a6fd6f-9168-4b8e-8dbf-c51253cb8f56?requestor=SFMyNTY.g2gDbQAAAA0xMjguMTM4LjY1LjU3bgYAKpz6G3kBYgABUYA.yZLe57em5SixPVWPgKa_SZRLv4uSyXwSZjIIpgwTFOM
+Logging in... done
+Logged in as chnz2983@colorado.edu
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ git remote -v
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ heroku logs
+ ›   Error: Missing required flag:
+ ›     -a, --app APP  app to run command against
+ ›   See more help with --help
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 27, in <module>
+    data = r.json()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ heroku logs
+ ›   Error: Missing required flag:
+ ›     -a, --app APP  app to run command against
+ ›   See more help with --help
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ git push heroku
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream heroku master
+
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 27, in <module>
+    data = r.json()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+probability is ['c-CS-m']
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 31, in <module>
+    data = r.json()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 31, in <module>
+    data = r.json()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python testdav_flask.py
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/testdav_flask.py", line 31, in <module>
+    data = r.json()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ python hellodav.py
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator SimpleImputer from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator StandardScaler from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator SVC from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator Pipeline from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+ * Serving Flask app "hellodav" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "/Users/chidinzerem/DavesClass/hellodav.py", line 45, in <module>
+    app.run(port=port)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/werkzeug/serving.py", line 1052, in run_simple
+    inner()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/werkzeug/serving.py", line 996, in inner
+    srv = make_server(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/werkzeug/serving.py", line 847, in make_server
+    return ThreadedWSGIServer(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/werkzeug/serving.py", line 740, in __init__
+    HTTPServer.__init__(self, server_address, handler)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ FLASK_APP=hellodav.py flask run
+ * Serving Flask app "hellodav.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator SimpleImputer from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator StandardScaler from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator SVC from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator Pipeline from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/labenv/bin/flask", line 8, in <module>
+    sys.exit(main())
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/flask/cli.py", line 967, in main
+    cli.main(args=sys.argv[1:], prog_name="python -m flask" if as_module else None)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/flask/cli.py", line 586, in main
+    return super(FlaskGroup, self).main(*args, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/click/decorators.py", line 73, in new_func
+    return ctx.invoke(f, obj, *args, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/flask/cli.py", line 852, in run_command
+    run_simple(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/werkzeug/serving.py", line 1052, in run_simple
+    inner()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/werkzeug/serving.py", line 996, in inner
+    srv = make_server(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/werkzeug/serving.py", line 847, in make_server
+    return ThreadedWSGIServer(
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/werkzeug/serving.py", line 740, in __init__
+    HTTPServer.__init__(self, server_address, handler)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/opt/anaconda3/envs/labenv/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ FLASK_APP=hellodav.py flask run --host=0.0.0.0
+ * Serving Flask app "hellodav.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator SimpleImputer from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator StandardScaler from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator SVC from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator Pipeline from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+^C(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ PORT=1234 FLASK_APP=hellodav.py flask run --host=0.0.0.0 --port=$PORT
+Usage: flask run [OPTIONS]
+Try 'flask run --help' for help.
+
+Error: Invalid value for '--port' / '-p':  is not a valid integer
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ 
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ export PORT=1324
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ PORT=1324 FLASK_APP=hellodav.py flask run --host=0.0.0.0 --port $PORT
+ * Serving Flask app "hellodav.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator SimpleImputer from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator StandardScaler from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator SVC from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+/opt/anaconda3/envs/labenv/lib/python3.9/site-packages/sklearn/base.py:310: UserWarning: Trying to unpickle estimator Pipeline from version 0.24.1 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  warnings.warn(
+ * Running on http://0.0.0.0:1324/ (Press CTRL+C to quit)
+^C(labenv) cu-tcomgw-4-10:DavesClass chidinzerem
+(labenv) cu-tcomgw-4-10:DavesClass chidinzerem$ PORT=1324 FLASK_APP=hellodav.py flask run --host=0.0.0.0 --port $PORT
+
+
+  [Restored Apr 30, 2021 at 2:10:42 PM]
+Last login: Fri Apr 30 14:10:34 on console
+Restored session: Fri Apr 30 14:09:44 MDT 2021
+(base) chidis-MacBook-Pro:DavesClass chidinzerem$ 
